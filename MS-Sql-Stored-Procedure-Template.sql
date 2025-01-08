@@ -6,10 +6,10 @@
 
 USE [DatabaseName]
 GO
-	SET ANSI_NULLS 		  ON
-	SET QUOTED_IDENTIFIER 	  ON	
-	SET ANSI_PADDING 	  ON
-	SET ANSI_WARNINGS 	  ON
+	SET ANSI_NULLS ON;
+	SET QUOTED_IDENTIFIER ON;
+	SET ANSI_PADDING ON;
+	SET ANSI_WARNINGS ON;
 GO
 
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = '[Stored Procedure Name]')
@@ -24,8 +24,8 @@ BEGIN
 DECLARE @variable1 nvarchar(4000)
 
 
---Make sure drop temp tables
-DROP TABLE #TempTable1,##TempTable2
+-- Make sure drop temp tables
+DROP TABLE #TempTable1,#TempTable2
 
 END
 GO
